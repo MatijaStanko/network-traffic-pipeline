@@ -4,7 +4,7 @@ object SampleMetrics {
 
   val metrics: List[SimpleMetric] = List(
     SimpleMetric(
-      timestamp = "2026-07-17T08:00:00",
+      timestamp = 1784275200L,
       deviceName = "router-1",
       entityName = "interface-1",
       metricName = "traffic-in",
@@ -12,7 +12,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:05:00",
+      timestamp = 1784275500L,
       deviceName = "router-1",
       entityName = "interface-1",
       metricName = "traffic-out",
@@ -20,7 +20,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:10:00",
+      timestamp = 1784275800L,
       deviceName = "router-1",
       entityName = "interface-2",
       metricName = "traffic-in",
@@ -28,7 +28,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:15:00",
+      timestamp = 1784276100L,
       deviceName = "router-1",
       entityName = "interface-2",
       metricName = "traffic-out",
@@ -36,7 +36,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:20:00",
+      timestamp = 1784276400L,
       deviceName = "router-1",
       entityName = "interface-3",
       metricName = "traffic-in",
@@ -44,7 +44,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:25:00",
+      timestamp = 1784276700L,
       deviceName = "router-1",
       entityName = "interface-3",
       metricName = "traffic-out",
@@ -53,7 +53,7 @@ object SampleMetrics {
     ),
 
     SimpleMetric(
-      timestamp = "2026-07-17T08:00:00",
+      timestamp = 1784275200L,
       deviceName = "router-2",
       entityName = "interface-1",
       metricName = "traffic-in",
@@ -61,7 +61,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:05:00",
+      timestamp = 1784275500L,
       deviceName = "router-2",
       entityName = "interface-1",
       metricName = "traffic-out",
@@ -69,7 +69,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:10:00",
+      timestamp = 1784275800L,
       deviceName = "router-2",
       entityName = "interface-2",
       metricName = "traffic-in",
@@ -77,7 +77,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:15:00",
+      timestamp = 1784276100L,
       deviceName = "router-2",
       entityName = "interface-2",
       metricName = "traffic-out",
@@ -85,7 +85,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:20:00",
+      timestamp = 1784276400L,
       deviceName = "router-2",
       entityName = "interface-3",
       metricName = "traffic-in",
@@ -93,7 +93,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:25:00",
+      timestamp = 1784276700L,
       deviceName = "router-2",
       entityName = "interface-3",
       metricName = "traffic-out",
@@ -102,7 +102,7 @@ object SampleMetrics {
     ),
 
     SimpleMetric(
-      timestamp = "2026-07-17T08:00:00",
+      timestamp = 1784275200L,
       deviceName = "router-3",
       entityName = "interface-1",
       metricName = "traffic-in",
@@ -110,7 +110,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:05:00",
+      timestamp = 1784275500L,
       deviceName = "router-3",
       entityName = "interface-1",
       metricName = "traffic-out",
@@ -118,7 +118,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:10:00",
+      timestamp = 1784275800L,
       deviceName = "router-3",
       entityName = "interface-2",
       metricName = "traffic-in",
@@ -126,7 +126,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:15:00",
+      timestamp = 1784276100L,
       deviceName = "router-3",
       entityName = "interface-2",
       metricName = "traffic-out",
@@ -134,7 +134,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:20:00",
+      timestamp = 1784276400L,
       deviceName = "router-3",
       entityName = "interface-3",
       metricName = "traffic-in",
@@ -142,7 +142,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:25:00",
+      timestamp = 1784276700L,
       deviceName = "router-3",
       entityName = "interface-3",
       metricName = "traffic-out",
@@ -151,7 +151,7 @@ object SampleMetrics {
     ),
 
     SimpleMetric(
-      timestamp = "2026-07-17T08:00:00",
+      timestamp = 1784275200L,
       deviceName = "switch-1",
       entityName = "port-1",
       metricName = "traffic-in",
@@ -159,7 +159,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:05:00",
+      timestamp = 1784275500L,
       deviceName = "switch-1",
       entityName = "port-1",
       metricName = "traffic-out",
@@ -167,7 +167,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:10:00",
+      timestamp = 1784275800L,
       deviceName = "switch-1",
       entityName = "port-2",
       metricName = "traffic-in",
@@ -175,7 +175,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:15:00",
+      timestamp = 1784276100L,
       deviceName = "switch-1",
       entityName = "port-2",
       metricName = "traffic-out",
@@ -183,7 +183,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:20:00",
+      timestamp = 1784276400L,
       deviceName = "switch-1",
       entityName = "port-3",
       metricName = "traffic-in",
@@ -191,7 +191,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:25:00",
+      timestamp = 1784276700L,
       deviceName = "switch-1",
       entityName = "port-3",
       metricName = "traffic-out",
@@ -200,7 +200,7 @@ object SampleMetrics {
     ),
 
     SimpleMetric(
-      timestamp = "2026-07-17T08:00:00",
+      timestamp = 1784275200L,
       deviceName = "switch-2",
       entityName = "port-1",
       metricName = "traffic-in",
@@ -208,7 +208,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:05:00",
+      timestamp = 1784275500L,
       deviceName = "switch-2",
       entityName = "port-1",
       metricName = "traffic-out",
@@ -216,7 +216,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:10:00",
+      timestamp = 1784275800L,
       deviceName = "switch-2",
       entityName = "port-2",
       metricName = "traffic-in",
@@ -224,7 +224,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:15:00",
+      timestamp = 1784276100L,
       deviceName = "switch-2",
       entityName = "port-2",
       metricName = "traffic-out",
@@ -232,7 +232,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:20:00",
+      timestamp = 1784276400L,
       deviceName = "switch-2",
       entityName = "port-3",
       metricName = "traffic-in",
@@ -240,7 +240,7 @@ object SampleMetrics {
       unit = "bps"
     ),
     SimpleMetric(
-      timestamp = "2026-07-17T08:25:00",
+      timestamp = 1784276700L,
       deviceName = "switch-2",
       entityName = "port-3",
       metricName = "traffic-out",

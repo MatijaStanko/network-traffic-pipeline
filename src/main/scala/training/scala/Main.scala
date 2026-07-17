@@ -1,6 +1,7 @@
 package training.scala
 
 import training.scala.model._
+import training.scala.parse._
 
 object Main {
 
@@ -48,5 +49,26 @@ object Main {
       println("-" * 90)
     }
 
+    val csvLines = SampleCsvLines.lines
+    val parseResult = csvLines.map(
+      NetworkMetricParser.parseCsvLine
+    )
+
+
+    val(errors, metrics3) =
+      parseResult.partitionMap(identity)
+
+    println("=" * 90)
+    println("GRESKE:")
+    errors.foreach(println)
+
+    println("-" * 90)
+    println("ISPRAVNO PARSIRANI REDOVI:")
+    metrics3.foreach { metric =>
+      println(NetworkMetricUtils.describeMetric(
+        metric, capacityBps2)
+      )
+      println("-" * 90)
+    }
   }
 }

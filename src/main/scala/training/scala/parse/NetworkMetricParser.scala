@@ -1,7 +1,7 @@
 package training.scala.parse
 
 import training.scala.model.{DeviceType, MetricUnit, NetworkMetric}
-import training.scala.parse.ValidationError.{EmptyField, InvalidColumnCount, InvalidDeviceType, InvalidDouble, InvalidMetricUnit, InvalidTimestamp, NegativeMetricValue}
+import training.scala.parse.ValidationError.{EmptyField, InvalidColumnCount, InvalidCsvRow, InvalidDeviceType, InvalidDouble, InvalidMetricUnit, InvalidTimestamp, NegativeMetricValue}
 
 import scala.util.Try
 
@@ -115,6 +115,40 @@ object NetworkMetricParser {
         unit = unit
       )
     }
+  }
+
+  def parseCsvLineWithContext(
+                               line: String,
+                               lineNumber: Int
+                             ): Either[ValidationError, NetworkMetric] = {
+    val columns =
+      line
+        .split(",", -1)
+        .map(_.trim)
+
+    val deviceName =
+      columns
+        .lift(1)
+        .filter(_.nonEmpty)
+        .getOrElse("unknown-device")
+
+    val metricName =
+      columns
+        .lift(4)
+        .filter(_.nonEmpty)
+        .getOrElse("unknown-metric")
+
+    parseCsvLine(line)
+      .left
+      .map { error =>
+        InvalidCsvRow(
+          lineNumber = lineNumber,
+          deviceName = deviceName,
+          metricName = metricName,
+          rawLine = line,
+          cause = error
+        )
+      }
   }
 
 

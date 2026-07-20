@@ -61,4 +61,19 @@ object ValidationError {
     override def message: String =
       s"Metric value must not be negative: $value."
   }
+
+  case class InvalidCsvRow(
+                            lineNumber: Int,
+                            deviceName: String,
+                            metricName: String,
+                            rawLine: String,
+                            cause: ValidationError
+                          ) extends ValidationError {
+
+    override def message: String =
+      s"Row $lineNumber | " +
+        s"device=$deviceName | " +
+        s"metric=$metricName | " +
+        cause.message
+  }
 }

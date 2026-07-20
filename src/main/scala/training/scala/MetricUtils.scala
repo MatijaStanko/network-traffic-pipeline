@@ -24,8 +24,8 @@ object MetricUtils {
     val utilization = utilizationPercent(metric.value, capacityBps)
     val load = classifyLoad(utilization)
 
-    println(f"${metric.device}%-12s | " +
-      f"${metric.metric}%-18s | " +
+    println(f"${metric.deviceName}%-12s | " +
+      f"${metric.metricName}%-18s | " +
       f"$valueInMbps%8.2f Mbps | " +
       f"$utilization%6.2f%% | " +
       f"$load%-8s |")
@@ -53,8 +53,8 @@ object MetricUtils {
       formatMetric(metric, capacityBps)
     }else{
       println(
-      f"${metric.device}%-12s | " +
-        f"${metric.metric}%-18s | " +
+      f"${metric.deviceName}%-12s | " +
+        f"${metric.metricName}%-18s | " +
         f"${"   Invalid: Non Positive value"}%-34s |")
     }
     }

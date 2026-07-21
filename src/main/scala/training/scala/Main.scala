@@ -1,5 +1,7 @@
 package training.scala
 
+import training.scala.model._
+
 object Main {
 
   def main(args: Array[String]): Unit = {
@@ -20,6 +22,31 @@ object Main {
     println("5 metrika sa najvecom ukupnom vrednoscu:".toUpperCase)
     MetricTranformations.topFiveEntitiesByValue(metrics).foreach(println)
     println()
-  }
 
+
+    val capacityBps2 = 1_000_000_000.0
+    val metrics2 = SampleNetworkMetrics.metrics
+
+    println("NETWORK METRICS")
+    println("=" * 90)
+
+    metrics2.foreach { metric =>
+      val normalizedMetric =
+        NetworkMetricUtils.addNormalizedValueToMetric(metric)
+
+      println(
+        NetworkMetricUtils.describeMetric(
+          normalizedMetric,
+          capacityBps2
+        )
+      )
+
+      println(
+        s"Normalized value: ${normalizedMetric.normalizedValue}"
+      )
+
+      println("-" * 90)
+    }
+
+  }
 }

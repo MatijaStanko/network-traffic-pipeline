@@ -1,7 +1,7 @@
 package training.scala
 
 case class SimpleMetric (
-                        timestamp: String,
+                        timestamp: Long,
                         deviceName: String,
                         entityName: String,
                         metricName: String,
